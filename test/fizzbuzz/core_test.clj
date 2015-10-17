@@ -4,6 +4,17 @@
             [fizzbuzz.core :refer :all]))
 
 (facts "about fizz"
-  (fact "Fizz returns 'fizz' if the number it gets is divisible through 3"
-    (fizz 3) => "Fizz"
-    (fizz 333) => "Fizz"))
+  (fact "returns 'fizz' if the number it gets is divisible through 3"
+    (fizz 3)   => "Fizz"
+    (fizz 333) => "Fizz")
+  (fact "returns the same number if the number is not divisible through 3"
+    (fizz 4)  => 4
+    (fizz 22) => 22))
+
+(facts "about buzz"
+  (fact "returns 'buzz' if the number it gets is divisible through 5"
+    (buzz 5)   => "Buzz"
+    (buzz 550) => "Buzz")
+  (fact "returns the same number if the number is not divisible through 5"
+    (buzz 4)  => 4
+    (buzz 22) => 22))

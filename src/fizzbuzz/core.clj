@@ -8,6 +8,13 @@
     "Fizz"
     x))
 
+(defn buzz
+  "Changes an integer to the word 'Buzz' if it is divisible through 5"
+  [x]
+  (if (zero? (mod x 5))
+    "Buzz"
+    x))
+
 (defn -main
   "I don't do a whole lot ... yet."
   [& args]
