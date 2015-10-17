@@ -4,7 +4,7 @@
 (defn fizz
   "Changes an integer to the word 'Fizz' if it is divisible through 3"
   [x]
-  (if (= 0 (mod x 3))
+  (if (zero? (mod x 3))
     "Fizz"
     x))
 
