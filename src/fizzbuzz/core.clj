@@ -10,10 +10,16 @@
 
 (defn buzz
   "Changes an integer to the word 'Buzz' if it is divisible through 5"
-  [x]
-  (if (zero? (mod x 5))
-    "Buzz"
-    x))
+  ([x]
+   (if (zero? (mod x 5))
+     "Buzz"
+     x))
+  ([y x]
+   (if (zero? (mod x 5))
+     (if (string? y)
+       (str y "Buzz")
+       "Buzz")
+     y)))
 
 (defn -main
   "I don't do a whole lot ... yet."
