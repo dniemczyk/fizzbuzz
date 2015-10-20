@@ -33,4 +33,7 @@
   (do
     (println "How long is the FizzBuzz string?:")
     (let [x (read-string (read-line))]
-      (println (s/join ", " (map str (fizzbuzz x)))))))
+      (->> (fizzbuzz x)
+           (map str)
+           (s/join ", ")
+           (println)))))
