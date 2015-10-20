@@ -17,4 +17,8 @@
     (buzz 550) => "Buzz")
   (fact "returns the same number if the number is not divisible through 5"
     (buzz 4)  => 4
-    (buzz 22) => 22))
+    (buzz 22) => 22)
+  (facts "with 2 arguments"
+    (fact "appends or changes 2nd to 'buzz' if 1st divisible through 5"
+      (buzz 55 4) => "Buzz"
+      (buzz 555 "Fizz") => "FizzBuzz")))
