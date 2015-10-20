@@ -1,5 +1,6 @@
 (ns fizzbuzz.core
-  (:gen-class))
+  (:gen-class)
+  (:require [clojure.string :as s :refer [join]]))
 
 (defn fizz
   "Changes an integer to the word 'Fizz' if it is divisible through 3"
@@ -27,6 +28,9 @@
          (map buzz xs))))
 
 (defn -main
-  "I don't do a whole lot ... yet."
+  "I print FizzBuzz"
   [& args]
-  (println "Hello, World!"))
+  (do
+    (println "How long is the FizzBuzz string?:")
+    (let [x (read-string (read-line))]
+      (println (s/join ", " (map str (fizzbuzz x)))))))
