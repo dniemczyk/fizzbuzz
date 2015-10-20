@@ -14,12 +14,17 @@
    (if (zero? (mod x 5))
      "Buzz"
      x))
-  ([y x]
+  ([x y]
    (if (zero? (mod x 5))
      (if (string? y)
        (str y "Buzz")
        "Buzz")
      y)))
+
+(defn fizzbuzz [x]
+  (let [xs (range 1 x)]
+    (->> (map fizz xs)
+         (map buzz xs))))
 
 (defn -main
   "I don't do a whole lot ... yet."
