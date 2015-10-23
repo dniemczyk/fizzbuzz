@@ -9,7 +9,14 @@
     (fizz 333) => "Fizz")
   (fact "returns the same number if the number is not divisible through 3"
     (fizz 4)  => 4
-    (fizz 22) => 22))
+    (fizz 22) => 22)
+  (facts "with 2 arguments"
+    (fact "appends or changes 2nd to 'fizz' if 1st divisible through 3"
+      (fizz 33 4) => "Fizz"
+      (fizz 333 "Buzz") => "BuzzFizz")
+    (fact "leaves the 2nd value unchanged if 1st not divisible throught 3"
+      (fizz 44 4) => 4
+      (fizz 55 "buzz") => "buzz")))
 
 (facts "about buzz"
   (fact "returns 'buzz' if the number it gets is divisible through 5"
