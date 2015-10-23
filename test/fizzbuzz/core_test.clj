@@ -28,4 +28,7 @@
   (facts "with 2 arguments"
     (fact "appends or changes 2nd to 'buzz' if 1st divisible through 5"
       (buzz 55 4) => "Buzz"
-      (buzz 555 "Fizz") => "FizzBuzz")))
+      (buzz 555 "Fizz") => "FizzBuzz")
+    (fact "leaves the 2nd value unchanged if 1st not divisible throught 5"
+      (buzz 44 4) => 4
+      (buzz 33 "fizz") => "fizz")))
