@@ -1,36 +1,25 @@
-# fizzbuzz
+## fizzbuzz
 
-FIXME: description
-
-## Installation
-
-Download from http://example.com/FIXME.
+Fizzbuzz example writen in Clojure.
 
 ## Usage
 
-FIXME: explanation
+Just run and type the length of the sequence of numbers.
 
-    $ java -jar fizzbuzz-0.1.0-standalone.jar [args]
+```bash
+lein run
+```
 
-## Options
+I recomend starting with 100.
 
-FIXME: listing of options this app accepts.
+### Comment
 
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
+Just one more fizzbuzz example added to the pile of useless programms.
+This one is never the less interesting from a Clojure beginner's point
+of view, because it uses a functional style and a macro.
 
 ## License
 
-Copyright © 2015 FIXME
+Copyright © 2015 Damian Niemczyk
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Distributed under the Eclipse Public License, the same as Clojure.
