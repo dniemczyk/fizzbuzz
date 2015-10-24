@@ -22,7 +22,7 @@
 (def buzz (string-if-modulo "Buzz" 5))
 
 (defn fizzbuzz [x]
-  (let [xs (range 1 x)]
+  (let [xs (range 1 (inc x))]
     (->> (map fizz xs)
          (map buzz xs))))
 
