@@ -2,20 +2,20 @@
   (:gen-class)
   (:require [clojure.string :as s :refer [join]]))
 
-(defmacro string-if-modulo
+(defn string-if-modulo
   "Changes the integer to string s if the integer is divisible through
    modulo. Basic building block for the Fizz and Buzz function from
    the fizzbuzz problem"
   [s modulo]
-  `(fn
-     ([x#]
-      (if (zero? (mod x# ~modulo)) ~s x#))
-     ([x# y#]
-      (if (zero? (mod x# ~modulo))
-        (if (string? y#)
-          (str y# ~s)
-          ~s)
-        y#))))
+  (fn
+    ([x]
+     (if (zero? (mod x modulo)) s x))
+    ([x y]
+     (if (zero? (mod x modulo))
+       (if (string? y)
+         (str y s)
+         s)
+       y))))
 
 (def fizz (string-if-modulo "Fizz" 3))
 
