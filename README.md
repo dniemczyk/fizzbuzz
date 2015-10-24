@@ -16,7 +16,7 @@ I recomend starting with 100.
 
 Just one more fizzbuzz example added to the pile of useless programms.
 This one is never the less interesting from a Clojure beginner's point
-of view, because it uses a functional style and a macro.
+of view, because it uses a functional style.
 
 ## License
 
