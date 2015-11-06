@@ -7,5 +7,5 @@
   :main ^:skip-aot fizzbuzz.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}
-             :dev {:dependencies [[midje "1.7.0"]]
-                   :plugins [[lein-midje "3.1.3"]]}})
+             :dev {:dependencies [[midje "1.8.1"]]
+                   :plugins [[lein-midje "3.2"]]}})
